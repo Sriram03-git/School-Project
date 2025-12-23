@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions - Arasi Nursery And Primary School</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Quicksand:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .step-card {
+            position: relative;
+            padding: 20px;
+            background: white;
+            border-radius: var(--radius-md);
+            text-align: center;
+            border: 2px solid transparent;
+            transition: 0.3s;
+        }
+
+        .step-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--secondary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 0 auto 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="section text-center fade-up">
+            <div class="container">
+                <h1 class="mb-md">Join Our Family</h1>
+                <p>We welcome you to become a part of the Arasi community.</p>
+            </div>
+        </section>
+
+        <!-- Process -->
+        <section class="section" style="background: var(--background);">
+            <div class="container">
+                <h2 class="text-center mb-lg">Admission Process</h2>
+                <div class="grid grid-4">
+                    <div class="step-card fade-up">
+                        <div class="step-number" style="background: var(--primary);">1</div>
+                        <h3>Inquiry</h3>
+                        <p>Fill out our online form or call us to express interest.</p>
+                    </div>
+                    <div class="step-card fade-up" style="animation-delay: 0.1s;">
+                        <div class="step-number" style="background: var(--secondary);">2</div>
+                        <h3>Campus Visit</h3>
+                        <p>Schedule a tour to see our facilities and meet teachers.</p>
+                    </div>
+                    <div class="step-card fade-up" style="animation-delay: 0.2s;">
+                        <div class="step-number" style="background: var(--accent); color: black;">3</div>
+                        <h3>Application</h3>
+                        <p>Submit the application form with required documents.</p>
+                    </div>
+                    <div class="step-card fade-up" style="animation-delay: 0.3s;">
+                        <div class="step-number" style="background: #4CAF50;">4</div>
+                        <h3>Confirmation</h3>
+                        <p>Receive admission offer and pay the fee to secure the seat.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources -->
+        <section class="section text-center">
+            <div class="container">
+                <div class="mb-lg">
+                    <h2>Resources</h2>
+                    <p class="mb-sm">Want to know more details before visiting?</p>
+                    <a href="#" class="btn btn-secondary" onclick="alert('Download started...'); return false;">Download
+                        Admission Guide (PDF)</a>
+                </div>
+
+                <div
+                    style="background: white; padding: 30px; border-radius: var(--radius-lg); max-width: 800px; margin: 0 auto; box-shadow: var(--shadow-sm);">
+                    <h3 class="mb-md">Frequently Asked Questions</h3>
+                    <div style="text-align: left;">
+                        <div class="mb-sm">
+                            <strong>Q: What is the minimum age for toddler group?</strong>
+                            <p class="text-soft">A: Children must be at least 1.5 years old.</p>
+                        </div>
+                        <div class="mb-sm">
+                            <strong>Q: Do you provide transportation?</strong>
+                            <p class="text-soft">A: Yes, we have safe school van services covering a 5km radius.</p>
+                        </div>
+                    </div>
+                    <div class="mt-md p-sm" style="background: var(--background); border-radius: 8px;">
+                        <p>For more details contact: <strong>sriramoffice03@gmail.com</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>
