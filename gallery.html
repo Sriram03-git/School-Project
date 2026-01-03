@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Arasi Nursery And Primary School</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Quicksand:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .gallery-item {
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            aspect-ratio: 4/3;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+            animation: fadeIn 0.3s;
+        }
+
+        .lightbox-img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+        }
+
+        .close-lightbox {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="section text-center fade-up">
+            <div class="container">
+                <h1 class="mb-md">Our Gallery</h1>
+                <p>Moments of joy, learning, and discovery.</p>
+            </div>
+        </section>
+
+        <!-- Campus -->
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <h3 class="mb-md" style="color: var(--primary);">Campus Life</h3>
+                <div class="grid grid-3">
+                    <div class="gallery-item fade-up" onclick="openLightbox(this)">
+                        <img src="https://placehold.co/400x300/FFB6C1/white?text=Campus+1" alt="Campus 1">
+                    </div>
+                    <div class="gallery-item fade-up" onclick="openLightbox(this)" style="animation-delay: 0.1s;">
+                        <img src="https://placehold.co/400x300/87CEFA/white?text=Campus+2" alt="Campus 2">
+                    </div>
+                    <div class="gallery-item fade-up" onclick="openLightbox(this)" style="animation-delay: 0.2s;">
+                        <img src="https://placehold.co/400x300/FECF4F/white?text=Campus+3" alt="Campus 3">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Activities -->
+        <section class="section">
+            <div class="container">
+                <h3 class="mb-md" style="color: var(--secondary);">Class Activities</h3>
+                <div class="grid grid-3">
+                    <div class="gallery-item fade-up" onclick="openLightbox(this)">
+                        <img src="https://placehold.co/400x300/90EE90/white?text=Activity+1" alt="Activity 1">
+                    </div>
+                    <div class="gallery-item fade-up" onclick="openLightbox(this)" style="animation-delay: 0.1s;">
+                        <img src="https://placehold.co/400x300/DDA0DD/white?text=Activity+2" alt="Activity 2">
+                    </div>
+                    <div class="gallery-item fade-up" onclick="openLightbox(this)" style="animation-delay: 0.2s;">
+                        <img src="https://placehold.co/400x300/FFA07A/white?text=Activity+3" alt="Activity 3">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events -->
+        <section class="section">
+            <div class="container">
+                <h3 class="mb-md" style="color: var(--accent);">Events</h3>
+                <div class="grid grid-3">
+                    <div class="gallery-item fade-up" onclick="openLightbox(this)">
+                        <img src="https://placehold.co/400x300/20B2AA/white?text=Event+1" alt="Event 1">
+                    </div>
+                    <div class="gallery-item fade-up" onclick="openLightbox(this)" style="animation-delay: 0.1s;">
+                        <img src="https://placehold.co/400x300/F08080/white?text=Event+2" alt="Event 2">
+                    </div>
+                    <div class="gallery-item fade-up" onclick="openLightbox(this)" style="animation-delay: 0.2s;">
+                        <img src="https://placehold.co/400x300/87CEEB/white?text=Event+3" alt="Event 3">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox UI -->
+        <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+            <span class="close-lightbox">&times;</span>
+            <img src="" alt="Fullscreen" class="lightbox-img" id="lightbox-img">
+        </div>
+    </main>
+
+    <script>
+        function openLightbox(element) {
+            const imgSrc = element.querySelector('img').src;
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+
+            lightboxImg.src = imgSrc;
+            lightbox.classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+    </script>
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>

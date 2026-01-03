@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & News - Arasi Nursery And Primary School</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Quicksand:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .filter-btn {
+            padding: 8px 16px;
+            margin: 0 5px;
+            border-radius: 20px;
+            border: 1px solid #ddd;
+            background: white;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--text-pri);
+            color: white;
+            border-color: var(--text-pri);
+        }
+
+        .event-card {
+            display: flex;
+            flex-direction: column;
+            background: white;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: 0.3s;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .event-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .event-body {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .event-date {
+            font-size: 0.9rem;
+            color: var(--text-soft);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .event-tag {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .tag-celebration {
+            background: #E6F3FF;
+            color: #0070F3;
+        }
+
+        .tag-announcement {
+            background: #FFF7E6;
+            color: #B7791F;
+        }
+
+        .tag-event {
+            background: #E6FFFA;
+            color: #2C7A7B;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="section text-center fade-up">
+            <div class="container">
+                <h1 class="mb-md">Events & News</h1>
+                <p>Stay updated with what's happening at Arasi School.</p>
+
+                <div class="mt-md">
+                    <button class="filter-btn active" onclick="filterEvents('all')">All</button>
+                    <button class="filter-btn" onclick="filterEvents('events')">Events</button>
+                    <button class="filter-btn" onclick="filterEvents('celebration')">Celebrations</button>
+                    <button class="filter-btn" onclick="filterEvents('announcement')">Announcements</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background: var(--background);">
+            <div class="container grid grid-3">
+
+                <!-- Event 1 -->
+                <div class="event-card fade-up category-events">
+                    <img src="https://placehold.co/400x200/FFB6C1/white?text=Annual+Day" class="event-img"
+                        alt="Annual Day">
+                    <div class="event-body">
+                        <span class="event-tag tag-event">Event</span>
+                        <span class="event-date">Dec 20, 2025</span>
+                        <h3>Annual School Day</h3>
+                        <p class="text-soft mt-sm">Join us for a day of performances and awards.</p>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="event-card fade-up category-celebration" style="animation-delay: 0.1s;">
+                    <img src="https://placehold.co/400x200/87CEFA/white?text=Pongal" class="event-img" alt="Pongal">
+                    <div class="event-body">
+                        <span class="event-tag tag-celebration">Celebration</span>
+                        <span class="event-date">Jan 14, 2026</span>
+                        <h3>Pongal Celebration</h3>
+                        <p class="text-soft mt-sm">Traditional attire and sweet pongal making.</p>
+                    </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="event-card fade-up category-announcement" style="animation-delay: 0.2s;">
+                    <img src="https://placehold.co/400x200/FECF4F/white?text=Exam" class="event-img" alt="Admission">
+                    <div class="event-body">
+                        <span class="event-tag tag-announcement">Announcement</span>
+                        <span class="event-date">Mar 01, 2026</span>
+                        <h3>Admissions Open 2026</h3>
+                        <p class="text-soft mt-sm">Applications open for the new academic year.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function filterEvents(category) {
+            const cards = document.querySelectorAll('.event-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            // Update buttons
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Filter
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains('category-' + category)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>

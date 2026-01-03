@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Arasi Nursery And Primary School</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Quicksand:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: var(--font-body);
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--background);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="section text-center fade-up">
+            <div class="container">
+                <h1 class="mb-md">Contact Us</h1>
+                <p>We'd love to hear from you. Reach out for admissions or queries.</p>
+            </div>
+        </section>
+
+        <section class="section" style="background: white;">
+            <div class="container grid grid-2">
+                <!-- Form -->
+                <div class="contact-form fade-up"
+                    style="background: var(--background); padding: 30px; border-radius: var(--radius-lg);">
+                    <h3 class="mb-md">Send us a message</h3>
+                    <form action="https://formsubmit.co/sriramoffice03@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="New Inquiry from Arasi School Website">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="http://localhost:5173/contact.html">
+                        <input type="hidden" name="_template" value="table">
+
+                        <label for="name">Parent's Name</label>
+                        <input type="text" id="name" name="name" placeholder=" Enter Your Name" required>
+
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter Yours Mail Id" required>
+
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+91 99999 99999" required>
+
+                        <label for="child-age">Child's Age</label>
+                        <select id="child-age" name="child_age">
+                            <option>1.5 - 2.5 Years</option>
+                            <option>2.5 - 3.5 Years</option>
+                            <option>3.5 - 4.5 Years</option>
+                            <option>Other</option>
+                        </select>
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="How can we help you?"></textarea>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Info -->
+                <div class="fade-up" style="animation-delay: 0.2s;">
+                    <h3 class="mb-md">Visit Our Campus</h3>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <strong>Address</strong>
+                            <p class="text-soft">Mana Madurai Main Road, Sirugudalpatti 630212</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <strong>Phone</strong>
+                            <p class="text-soft">+91 63790 37275</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <strong>Email</strong>
+                            <p class="text-soft">sriramoffice03@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon">🕒</div>
+                        <div>
+                            <strong>Office Hours</strong>
+                            <p class="text-soft">Mon – Fri, 9 AM – 4 PM</p>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 30px;">
+                        <a href="https://maps.app.goo.gl/WKLoP4xMYV6xk67YA" target="_blank" title="View on Google Maps">
+                            <img src="public/images/MAP.png" alt="Map"
+                                style="border-radius: var(--radius-md); width: 100%; transition: transform 0.3s; cursor: pointer;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>

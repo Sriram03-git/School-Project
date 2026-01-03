@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs - Arasi Nursery And Primary School</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Quicksand:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: 2px solid var(--primary);
+            background: white;
+            color: var(--primary);
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .tab-btn.active,
+        .tab-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .activity-icon {
+            font-size: 2rem;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="section text-center fade-up">
+            <div class="container">
+                <h1 class="mb-md">Our Programs</h1>
+                <p class="text-soft">Comprehensive learning paths designed for every stage of early childhood.</p>
+            </div>
+        </section>
+
+        <section class="section" style="background: white;">
+            <div class="container">
+                <div class="tabs">
+                    <button class="tab-btn active" onclick="openTab(event, 'toddler')">Toddler Group</button>
+                    <button class="tab-btn" onclick="openTab(event, 'prekg')">Pre-KG</button>
+                    <button class="tab-btn" onclick="openTab(event, 'jrkg')">Junior KG</button>
+                    <button class="tab-btn" onclick="openTab(event, 'srkg')">Senior KG</button>
+                    <button class="tab-btn" onclick="openTab(event, 'primary')">Primary (1st-5th)</button>
+                    <button class="tab-btn" onclick="openTab(event, 'extra')">Extra-Curricular</button>
+                </div>
+
+                <div id="toddler" class="tab-content active container" style="max-width: 800px;">
+                    <h2 class="text-center mb-sm" style="color: var(--primary);">Toddler Group (1.5 – 2.5 yrs)</h2>
+                    <div class="card mb-md"
+                        style="background: var(--background); padding: 20px; border-radius: var(--radius-md);">
+                        <h4 class="mb-sm">Learning Outcomes</h4>
+                        <ul style="list-style: disc; padding-left: 20px; margin-bottom: 20px;">
+                            <li>Social interaction and sharing skills</li>
+                            <li>Basic motor skill development</li>
+                            <li>Recognizing colors and shapes</li>
+                        </ul>
+                        <h4 class="mb-sm">Activities</h4>
+                        <div class="grid grid-2">
+                            <div style="display: flex; align-items: center;"><span class="activity-icon">🧸</span>
+                                Sensory Play</div>
+                            <div style="display: flex; align-items: center;"><span class="activity-icon">🎵</span> Rhyme
+                                Time</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="prekg" class="tab-content container" style="max-width: 800px;">
+                    <h2 class="text-center mb-sm" style="color: var(--secondary);">Pre-KG (2.5 – 3.5 yrs)</h2>
+                    <div class="card mb-md"
+                        style="background: var(--background); padding: 20px; border-radius: var(--radius-md);">
+                        <h4 class="mb-sm">Learning Outcomes</h4>
+                        <ul style="list-style: disc; padding-left: 20px; margin-bottom: 20px;">
+                            <li>Enhancing vocabulary and sentence formation</li>
+                            <li>Introduction to numbers 1-10</li>
+                            <li>Self-expression through art</li>
+                        </ul>
+                        <h4 class="mb-sm">Activities</h4>
+                        <div class="grid grid-2">
+                            <div style="display: flex; align-items: center;"><span class="activity-icon">📚</span> Story
+                                Telling</div>
+                            <div style="display: flex; align-items: center;"><span class="activity-icon">🎨</span>
+                                Finger Painting</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="jrkg" class="tab-content container" style="max-width: 800px;">
+                    <h2 class="text-center mb-sm" style="color: var(--accent);">Junior KG (3.5 – 4.5 yrs)</h2>
+                    <div class="card mb-md"
+                        style="background: var(--background); padding: 20px; border-radius: var(--radius-md);">
+                        <h4 class="mb-sm">Learning Outcomes</h4>
+                        <ul style="list-style: disc; padding-left: 20px; margin-bottom: 20px;">
+                            <li>Reading simple words and writing alphabet</li>
+                            <li>Basic arithmetic (addition)</li>
+                            <li>Understanding of the world around us</li>
+                        </ul>
+                        <h4 class="mb-sm">Activities</h4>
+                        <div class="grid grid-2">
+                            <div style="display: flex; align-items: center;"><span class="activity-icon">🔢</span>
+                                Number Games</div>
+                            <div style="display: flex; align-items: center;"><span class="activity-icon">🔬</span>
+                                Nature Walk</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="srkg" class="tab-content container" style="max-width: 800px;">
+                    <h2 class="text-center mb-sm" style="color: var(--primary);">Senior KG (4.5 – 5.5 yrs)</h2>
+                    <div class="card mb-md"
+                        style="background: var(--background); padding: 20px; border-radius: var(--radius-md);">
+                        <h4 class="mb-sm">Learning Outcomes</h4>
+                        <ul style="list-style: disc; padding-left: 20px; margin-bottom: 20px;">
+                            <li>Complex sentence formation</li>
+                            <li>Introduction to basic environmental science</li>
+                            <li>Creative storytelling and role play</li>
+                        </ul>
+                        <h4 class="mb-sm">Activities</h4>
+                        <div class="grid grid-2">
+                            <div style="display: flex; align-items: center;"><span class="activity-icon">🎭</span>
+                                Role Play</div>
+                            <div style="display: flex; align-items: center;"><span class="activity-icon">🧩</span>
+                                Advanced Puzzles</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="primary" class="tab-content container" style="max-width: 800px;">
+                    <h2 class="text-center mb-sm" style="color: var(--secondary);">Primary School (Class 1 - 5)</h2>
+                    <div class="card mb-md"
+                        style="background: var(--background); padding: 20px; border-radius: var(--radius-md);">
+                        <h4 class="mb-sm">Curriculum Highlights</h4>
+                        <ul style="list-style: disc; padding-left: 20px; margin-bottom: 20px;">
+                            <li>Core subjects: English, Mathematics, Science, Social Studies</li>
+                            <li>Second Language options (Tamil/Hindi)</li>
+                            <li>Computer Science and Physical Education</li>
+                            <li>Project-based learning and assessments</li>
+                        </ul>
+                        <h4 class="mb-sm">Activities</h4>
+                        <div class="grid grid-2">
+                            <div style="display: flex; align-items: center;"><span class="activity-icon">🧪</span>
+                                Science Labs</div>
+                            <div style="display: flex; align-items: center;"><span class="activity-icon">💻</span>
+                                Computer Classes</div>
+                            <div style="display: flex; align-items: center;"><span class="activity-icon">🏆</span>
+                                Sports Meets</div>
+                            <div style="display: flex; align-items: center;"><span class="activity-icon">🗣️</span>
+                                Public Speaking</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="extra" class="tab-content container" style="max-width: 800px;">
+                    <h2 class="text-center mb-sm" style="color: var(--text-pri);">Enrichment Programs</h2>
+                    <div class="card mb-md"
+                        style="background: var(--background); padding: 20px; border-radius: var(--radius-md);">
+                        <h4 class="mb-sm">We offer:</h4>
+                        <div class="grid grid-2">
+                            <div style="display: flex; align-items: center;"><span class="activity-icon">🖌️</span> Art
+                                & Craft Sessions</div>
+                            <div style="display: flex; align-items: center;"><span class="activity-icon">💃</span> Music
+                                & Movement</div>
+                            <div style="display: flex; align-items: center;"><span class="activity-icon">📖</span> Early
+                                Literacy Corner</div>
+                            <div style="display: flex; align-items: center;"><span class="activity-icon">⚽</span>
+                                Outdoor Sports</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>
