@@ -21,7 +21,7 @@ export function loadHeader() {
           <li><a href="/admissions.html" class="nav-link">Admissions</a></li>
           <li><a href="/gallery.html" class="nav-link">Gallery</a></li>
           <li><a href="/events.html" class="nav-link">Events</a></li>
-          <li><a href="/contact.html" class="nav-link btn btn-primary">Contact</a></li>
+          <li><a href="/contact.html" class=" btn btn-primary">Contact</a></li>
         </ul>
       </div>
     </nav>
