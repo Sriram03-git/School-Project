@@ -5,12 +5,11 @@ export function loadFooter() {
       <div class="container grid grid-4">
         <div class="footer-col">
           <div class="footer-logo">
-            <img src="public/images/logo.png" alt="Arasi Nursery And Primary School" onerror="this.style.display='none'">
+            <img src="/images/logo.png" alt="Arasi Nursery And Primary School" onerror="this.style.display='none'">
             <h3>Arasi Nursery <br> & Primary School</h3>
-          </div>
+          </div> 
           <p class="mt-sm">Growing Bright Minds, One Day at a Time. A safe and caring environment for your child.</p>
         </div>
-
         <div class="footer-col">
           <h4>Quick Links</h4>
           <ul class="footer-links">
