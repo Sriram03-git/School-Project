@@ -1,23 +1,23 @@
 import { defineConfig } from "vite";
+import { resolve } from "path";
 
 export default defineConfig({
-  // Ensure strict port to avoid rapid switching if multiple instances run
   server: {
     port: 5173,
     strictPort: true,
-    hmr: {
-      // Explicitly define HMR connection to avoid timeouts causing reconnect loops
-      protocol: "ws",
-      host: "localhost",
-    },
-    // Prevent watching ephemeral files that might trigger loops
-    watch: {
-      ignored: ["**/node_modules/**", "**/.git/**"],
-      usePolling: false, // Ensure native events are used (better for perf)
-    },
   },
-  // Optimize dependency pre-bundling
-  optimizeDeps: {
-    include: [],
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, "index.html"),
+        about: resolve(__dirname, "about.html"),
+        admissions: resolve(__dirname, "admissions.html"),
+        contact: resolve(__dirname, "contact.html"),
+        events: resolve(__dirname, "events.html"),
+        facilities: resolve(__dirname, "facilities.html"),
+        gallery: resolve(__dirname, "gallery.html"),
+        programs: resolve(__dirname, "programs.html"),
+      },
+    },
   },
 });
