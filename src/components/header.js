@@ -3,7 +3,7 @@ export function loadHeader() {
     <nav class="navbar">
       <div class="container nav-container">
         <a href="/" class="logo-link">
-          <img src="public/images/logo.png" alt="Arasi Nursery And Primary School Logo" class="nav-logo" onerror="this.src='https://placehold.co/150x50/FFB6C1/white?text=Arasi+School'">
+          <img src="/images/logo.png" alt="Arasi Nursery And Primary School Logo" class="nav-logo" onerror="this.src='https://placehold.co/150x50/FFB6C1/white?text=Arasi+School'">
           <span class="school-name">Arasi Nursery <br> & Primary School</span>
         </a>
         
